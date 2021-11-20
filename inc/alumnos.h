@@ -28,7 +28,12 @@ extern "C" {
 /*=====[Public function-like macros]=========================================*/
 
 /*=====[Definitions of public data types]====================================*/
-
+/** 
+ * @brief Estructura para almacenar los datos del alumno
+ * @param apellidos Cadena que almacena los apellidos
+ * @param nombres Cadena que almacena los nombres
+ * @param documento Cadena que almacena el DNI
+ */
 typedef struct alumno_s {
     char apellidos[30];
     char nombres[30];
@@ -38,9 +43,19 @@ typedef struct alumno_s {
 /*=====[Definitions of public global variables]==============================*/
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
-
+/** 
+ * @brief Función para formatear los datos del alumno para su impresión en pantalla
+ * @param cadena Cadena a serializar
+ * @param espacio Número de caracteres de la cadena
+ * @param alumno Estructura con los datos del alumno
+ */
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
-
+/** 
+ * @brief Función que llama a SerializarAlumno para cada una de las estructuras alumno_t, 
+ * almacenadas en la estructura ALUMNOS
+ * @param cadena Cadena a serializar
+ * @param espacio Número de caracteres de la cadena
+ */
 bool SerializarAlumnos(char * cadena, size_t espacio);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/

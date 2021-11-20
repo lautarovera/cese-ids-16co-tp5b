@@ -33,7 +33,9 @@
 /*=====[Implementations of interrupt functions]==============================*/
 
 /*=====[Implementations of private functions]================================*/
-
+/**
+ * @brief Aplicación principal
+ */
 int main(int argc, char *argv[]) {
     char cadena[2048];
 
